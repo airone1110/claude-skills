@@ -1,0 +1,12 @@
+{
+  "name": "mes-skills",
+  "owner": { "name": "airone1110" },
+  "description": "Mes skills personnels pour Claude Code et Claude Desktop.",
+  "plugins": [
+    {
+      "name": "perso",
+      "source": "./plugins/perso",
+      "description": "Skills personnels du quotidien (langues, outils perso)."
+    }
+  ]
+}
