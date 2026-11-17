@@ -16,6 +16,7 @@ scripts/
   nouveau-skill.sh                  ← crée un skill depuis le modèle
   verifier.sh                       ← valide le marketplace et les skills
   zip-skill.sh                      ← emballe un skill en .zip (import manuel)
+  inventaire.py                     ← liste TOUS les skills de la machine, par provenance
 ```
 
 Pour un nouveau thème (ex. `trading`, `dev`), créer `plugins/<thème>/` avec son `plugin.json`, et l'ajouter dans `marketplace.json`. Chaque plugin s'active ou se désactive d'un bloc.
@@ -58,6 +59,16 @@ Puis mettre à jour le marketplace : dans Desktop, *Customize → Plugins* ; dan
 | Serveur MCP local, binaires | ✘ | ✔ (sur l'ordinateur) | ✔ |
 
 Un skill qui doit marcher partout ne dépend ni d'un chemin de fichier de mon Mac, ni d'un outil installé localement.
+
+## Vue d'ensemble de tous mes skills
+
+```sh
+scripts/inventaire.py --court        # résumé par provenance
+scripts/inventaire.py                # détail avec descriptions
+scripts/inventaire.py --sortie ~/Desktop/skills.md
+```
+
+Couvre ce dépôt, `~/.claude/skills` (gstack, n8n…), les plugins installés dans Claude Code et les skills propres à un projet. Les skills ajoutés seulement dans Desktop/claude.ai et ceux intégrés par Anthropic se voient avec `/skills` dans Claude Code, ou dans Desktop sous *Customize → Skills*.
 
 ## Hors de ce dépôt
 
